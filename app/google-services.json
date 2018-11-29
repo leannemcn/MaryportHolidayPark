@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "213693535480",
+    "firebase_url": "https://maryport-holiday-park-85d39.firebaseio.com",
+    "project_id": "maryport-holiday-park-85d39",
+    "storage_bucket": "maryport-holiday-park-85d39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213693535480:android:b8a28054109bdf2a",
+        "android_client_info": {
+          "package_name": "com.example.b00682737.maryportholidaypark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213693535480-feklgl624v44v9sm5bmtoo3h77hmobfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmAPuw-USIHxzDP43YzBMENXmZhiKyyuk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
