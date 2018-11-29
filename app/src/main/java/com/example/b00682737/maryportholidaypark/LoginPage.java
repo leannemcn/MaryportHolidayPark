@@ -53,8 +53,9 @@ public class LoginPage extends AppCompatActivity {
         registerHere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginPage.this, RegisterPage.class));
-            } //to allow users to register an account
+                Intent registerOpen = new Intent(LoginPage.this, RegisterPage.class);
+                LoginPage.this.startActivity(registerOpen);
+            } //this will open register page once selected
         });
 
     }
