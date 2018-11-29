@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".RegisterPage" />
         <activity android:name=".ProfilePage" />
-        <activity android:name=".BookingPage"></activity>
+        <activity android:name=".BookingPage" />
+        <activity android:name=".CancelBooking"></activity>
     </application>
 
 </manifest>
