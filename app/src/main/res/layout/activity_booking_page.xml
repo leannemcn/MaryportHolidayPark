@@ -12,18 +12,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="155dp"
+        android:layout_marginBottom="171dp"
         android:entries="@array/bedroom" />
 
 
     <TextView
-        android:id="@+id/checkIn"
+        android:id="@+id/checkIN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="18dp"
         android:text="Check in date"
         android:textSize="18sp" />
 
@@ -31,32 +31,67 @@
         android:id="@+id/checkOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="114dp"
+        android:layout_alignStart="@+id/checkIN"
+        android:layout_marginTop="58dp"
         android:text="Check out date"
         android:textSize="18sp"
         tools:text="Check out date" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/enterCheckIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkOut"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="57dp"
+        android:layout_marginStart="17dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="enter in many" />
+        android:hint="Enter check in date"
+        android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/createBookingg"
+        android:id="@+id/createBooking2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="78dp"
-        android:text="Button" />
+        android:text="Create Booking" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/checkIN"
+        android:layout_marginStart="28dp"
+        android:text="please enter check in date" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="117dp"
+        android:text="Please enter check out date" />
+
+    <EditText
+        android:id="@+id/enterCheckOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/enterCheckIn"
+        android:layout_marginTop="160dp"
+        android:ems="10"
+        android:hint="Enter check out date"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Please select the number of bedrooms you require" />
 
 </RelativeLayout>
