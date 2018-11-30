@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "213693535480-hn8798jd5n8aerqfu3carkrvrtpu5mr3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.b00682737.maryportholidaypark",
+            "certificate_hash": "f542d22f0ee77942010ab68205f6e775a25ae236"
+          }
+        },
+        {
           "client_id": "213693535480-feklgl624v44v9sm5bmtoo3h77hmobfk.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213693535480-feklgl624v44v9sm5bmtoo3h77hmobfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

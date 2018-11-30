@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Maryport Holiday Park</string>
-    <string name="radio_twoBed">2 Bed</string>
-    <string name="radio_threeBed">3 Bed</string>
+
+    <array name = "bedroom">
+        <item>Two Bed</item>
+        <item>Three Bed</item>
+    </array>
 </resources>

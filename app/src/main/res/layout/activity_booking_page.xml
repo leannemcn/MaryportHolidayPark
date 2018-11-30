@@ -6,49 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".BookingPage">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinnerSpin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="57dp"
-        android:layout_marginTop="13dp">
-
-        <RadioButton
-            android:id="@+id/radio_twobed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/radio_twoBed" />
-
-        <RadioButton
-            android:id="@+id/radio_threebed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_threeBed" />
-
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="182dp"
-        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="35dp"
-        android:text="Number of beds"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="24sp" />
+        android:layout_marginBottom="155dp"
+        android:entries="@array/bedroom" />
+
 
     <TextView
         android:id="@+id/checkIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="131dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="67dp"
         android:text="Check in date"
         android:textSize="18sp" />
 
@@ -56,11 +31,32 @@
         android:id="@+id/checkOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="193dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="114dp"
         android:text="Check out date"
         android:textSize="18sp"
         tools:text="Check out date" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="57dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="enter in many" />
+
+    <Button
+        android:id="@+id/createBookingg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="78dp"
+        android:text="Button" />
 
 </RelativeLayout>
