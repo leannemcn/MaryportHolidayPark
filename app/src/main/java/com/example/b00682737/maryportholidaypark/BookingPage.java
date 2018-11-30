@@ -17,11 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class BookingPage extends AppCompatActivity {
 
     private static final String TAG = "BookingPage";
-    private TextView mDisplayDate;
-    private DatePickerDialog.OnDateSetListener mDateSetListener, mDateSetListener2;
-    private TextView mDisplayDate2;
-
-    EditText enterCheckIn, enterCheckOut, editTextName;
+    EditText enterCheckIn, enterCheckOut;
     Button createBooking2;
     Spinner spinnerSpin;
 
@@ -32,8 +28,6 @@ public class BookingPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_page);
-        //   mDisplayDate = (TextView) findViewById(R.id.checkIn);
-        //mDisplayDate2 = (TextView) findViewById(R.id.checkOut);
 
         databaseCaravan = FirebaseDatabase.getInstance().getReference("bookings");
 
@@ -51,61 +45,6 @@ public class BookingPage extends AppCompatActivity {
         });
     }
 
-        //  mDisplayDate.setOnClickListener(new View.OnClickListener(){
-        //    @Override
-        //   public void onClick(View view){
-        //    Calendar cal = Calendar.getInstance();
-        //   int year = cal.get(Calendar.YEAR);
-        //  int day = cal.get(Calendar.DAY_OF_MONTH);
-        //  int month = cal.get(Calendar.MONTH);
-
-        // DatePickerDialog dialog = new DatePickerDialog(
-        //     BookingPage.this,
-        //    //     android.R.style.Theme_Light, mDateSetListener, year, day, month);
-        // dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        // dialog.show();
-        // }
-        //  });
-
-        //  mDisplayDate2.setOnClickListener(new View.OnClickListener(){
-        //   @Override
-        //  public void onClick(View view){
-        //   Calendar cal2 = Calendar.getInstance();
-        //  int year = cal2.get(Calendar.YEAR);
-        //  int day = cal2.get(Calendar.DAY_OF_MONTH);
-        // int month = cal2.get(Calendar.MONTH);
-
-        //  DatePickerDialog dialog2 = new DatePickerDialog(
-        //       BookingPage.this,
-        //       android.R.style.Theme_Light, mDateSetListener2, year, day, month);
-        // dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        // dialog2.show();
-        //  }
-        //  });
-
-        //mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-        // @Override
-        // public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        //   month = month + 1; //this makes january appear as month 1 instead of 0
-        //  Log.d(TAG, "onDateSet: mm/dd/yyyy: " + month + "/" + day + "/" + year );
-        // String date = month + "/" + day + "/" + year;
-        // mDisplayDate.setText(date);
-        //    }
-
-        //   };
-
-        //  mDateSetListener2 = new DatePickerDialog.OnDateSetListener() {
-        //  @Override
-        // public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        //    month = month + 1; //this makes january appear as month 1 instead of 0
-        //    Log.d(TAG, "onDateSet: mm/dd/yyyy: " + month + "/" + day + "/" + year );
-        //   String date = month + "/" + day + "/" + year;
-        //   mDisplayDate2.setText(date);
-        // }
-
-        //  };
-
-        // }
 
         private void addBooking(){
             String checkingin = enterCheckIn.getText().toString().trim();

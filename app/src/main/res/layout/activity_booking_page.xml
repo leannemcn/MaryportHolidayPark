@@ -16,35 +16,13 @@
         android:entries="@array/bedroom" />
 
 
-    <TextView
-        android:id="@+id/checkIN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="18dp"
-        android:text="Check in date"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/checkOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/checkIN"
-        android:layout_marginTop="58dp"
-        android:text="Check out date"
-        android:textSize="18sp"
-        tools:text="Check out date" />
-
     <EditText
         android:id="@+id/enterCheckIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/checkOut"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="103dp"
         android:ems="10"
         android:hint="Enter check in date"
         android:inputType="textPersonName" />
@@ -61,28 +39,19 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/checkIN"
-        android:layout_marginStart="28dp"
-        android:text="please enter check in date" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="39dp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="117dp"
-        android:text="Please enter check out date" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Please fill out the details below before making a booking" />
 
     <EditText
         android:id="@+id/enterCheckOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/enterCheckIn"
-        android:layout_marginTop="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="185dp"
         android:ems="10"
         android:hint="Enter check out date"
         android:inputType="textPersonName" />

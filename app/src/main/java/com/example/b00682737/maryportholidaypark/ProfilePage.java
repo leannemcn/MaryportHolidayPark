@@ -22,8 +22,6 @@ public class ProfilePage extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        createButton = (Button) findViewById(R.id.createButton);
-        exisitngButton = (Button) findViewById(R.id.exisitngButton);
         signOut = (Button) findViewById(R.id.signOut);
 
         signOut.setOnClickListener(new View.OnClickListener() {
