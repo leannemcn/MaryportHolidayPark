@@ -27,9 +27,8 @@ public class Caravan {
         return caravanCheckIn;
     }
 
-    public String getCaravanBedrooms() {
-        return caravanBedrooms;
-    }
+   public String getCaravanBedrooms() { return caravanBedrooms;
+   }
 
     public String getCaravanCheckOut() {
         return caravanCheckOut;

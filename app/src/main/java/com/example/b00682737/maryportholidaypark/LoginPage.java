@@ -71,7 +71,7 @@ public class LoginPage extends AppCompatActivity {
                     Toast.makeText(LoginPage.this, "Failed Login", Toast.LENGTH_SHORT).show();
                     remaining --;
                     Attempts.setText("Number of attempts left: " + remaining);
-                    if(remaining ==0 ); {loginButton.setEnabled(false);}
+                    if(remaining ==0 ) {loginButton.setEnabled(false);}
                     //this will disable login button after 3 incorrect attempts
                 }
             }

@@ -53,20 +53,13 @@ public class ProfilePage extends AppCompatActivity {
             return false;
 
 
-        } else if (id == R.id.cancelBooking) {
-                Intent cancelintent = new Intent(ProfilePage.this, CancelBooking.class);
+        } if (id == R.id.cancelBooking) {
+               Intent cancelintent = new Intent(ProfilePage.this, CancelBooking.class);
                 ProfilePage.this.startActivity(cancelintent); //to display the cancel booking page
 
-                return false;
-            } else if (id == R.id.signOut1) {
-                    Intent signOut = new Intent(ProfilePage.this, LoginPage.class);
-                    ProfilePage.this.startActivity(signOut);
+               return false; }
 
-                    return false;
-
-
-                }
-                return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);
             }
 
         }
