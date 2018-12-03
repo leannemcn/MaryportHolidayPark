@@ -63,12 +63,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Attempts remaining"
-        android:textSize="24sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginPassword"
-        app:layout_constraintVertical_bias="0.695" />
+        app:layout_constraintVertical_bias="0.752" />
 
     <TextView
         android:id="@+id/registerHere"
@@ -81,6 +82,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Register Here"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/Attempts"
         app:layout_constraintEnd_toEndOf="parent"

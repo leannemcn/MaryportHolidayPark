@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -42,10 +41,11 @@ public class RegisterPage extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
                                 firebaseAuth1.signOut();
-
                                 Toast.makeText(RegisterPage.this, "Registration complete", Toast.LENGTH_LONG) .show();
                                 finish();
                                 startActivity(new Intent(RegisterPage.this, LoginPage.class));
+                                //will return user to login page providing valid details have been entered
+
                             }else{ Toast.makeText(RegisterPage.this, "Registration has failed", Toast.LENGTH_LONG) .show();
                             }
                         }

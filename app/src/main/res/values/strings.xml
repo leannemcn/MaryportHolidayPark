@@ -5,4 +5,10 @@
         <item>Two Bed</item>
         <item>Three Bed</item>
     </array>
+
+    <array name = "extras">
+        <item>Cot</item>
+        <item>High Chair</item>
+        <item>WIFI</item>
+    </array>
 </resources>

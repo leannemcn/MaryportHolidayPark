@@ -7,13 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfilePage extends AppCompatActivity {
 
-    private FirebaseAuth firebaseAuth;
-    Button createButton, exisitngButton, signOut;
+    FirebaseAuth firebaseAuth;
+    Button signOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,6 @@ public class ProfilePage extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         signOut = (Button) findViewById(R.id.signOut);
-
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

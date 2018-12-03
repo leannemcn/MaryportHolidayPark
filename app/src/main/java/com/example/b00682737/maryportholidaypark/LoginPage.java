@@ -1,6 +1,6 @@
 package com.example.b00682737.maryportholidaypark;
 
-import android.app.ProgressDialog;
+
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -42,7 +41,7 @@ public class LoginPage extends AppCompatActivity {
         FirebaseUser user = firebaseAuth1.getCurrentUser();
         if (user != null) { finish();
             startActivity(new Intent(LoginPage.this, ProfilePage.class));
-        }
+        } //if valid username inserted log in to their profile page
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,8 +67,8 @@ public class LoginPage extends AppCompatActivity {
                     Toast.makeText(LoginPage.this, "Successful Login", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LoginPage.this, ProfilePage.class));
                 } else {
-                    Toast.makeText(LoginPage.this, "Failed Login", Toast.LENGTH_SHORT).show();
-                    remaining --;
+                    Toast.makeText(LoginPage.this, "Error, failed Login", Toast.LENGTH_SHORT).show();
+                    remaining --; //will decrease login attempts
                     Attempts.setText("Number of attempts left: " + remaining);
                     if(remaining ==0 ) {loginButton.setEnabled(false);}
                     //this will disable login button after 3 incorrect attempts
