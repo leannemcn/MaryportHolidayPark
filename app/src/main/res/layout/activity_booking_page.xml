@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,9 +9,8 @@
         android:id="@+id/spinnerSpin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="211dp"
+        android:layout_centerVertical="true"
         android:entries="@array/bedroom" />
 
 
@@ -22,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="86dp"
+        android:layout_marginTop="77dp"
         android:ems="10"
         android:hint="Enter check in date"
         android:inputType="textPersonName" />
@@ -42,8 +40,9 @@
         android:layout_height="39dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Please fill out the details below before making a booking" />
+        android:layout_marginTop="14dp"
+        android:text="Please fill out the details below before making a booking"
+        android:textColor="@android:color/holo_blue_dark" />
 
     <EditText
         android:id="@+id/enterCheckOut"
@@ -51,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="136dp"
         android:ems="10"
         android:hint="Enter check out date"
         android:inputType="textPersonName" />
@@ -62,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="205dp"
         android:text="Please select the number of bedrooms you require" />
 
     <TextView
@@ -71,8 +70,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView4"
-        android:layout_marginBottom="176dp"
-        android:text="Extras if required" />
+        android:layout_marginBottom="194dp"
+        android:text="Please select any of the extras if required" />
 
     <Spinner
         android:id="@+id/spinnerSpin2"
@@ -80,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="114dp"
+        android:layout_marginBottom="134dp"
         android:entries="@array/extras" />
 
 </RelativeLayout>

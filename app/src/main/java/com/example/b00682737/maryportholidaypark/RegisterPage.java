@@ -32,11 +32,14 @@ public class RegisterPage extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (validate()) {
+                if (valid()) {
                     String registerusername = registerUsername.getText().toString().trim();
                     String registerpassword = registerPassword.getText().toString().trim();
+                    //username and password will be validated and uploaded and stored to the database
 
-                    firebaseAuth1.createUserWithEmailAndPassword(registerusername, registerpassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    firebaseAuth1.createUserWithEmailAndPassword(registerusername, registerpassword).addOnCompleteListener(new OnCompleteListener<AuthResult>()
+                    // creates user with authentic username and password
+                            {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
@@ -58,6 +61,7 @@ public class RegisterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RegisterPage.this, LoginPage.class));
+                //will bring user back to the Login page
             }
         });
     }
@@ -73,7 +77,7 @@ public class RegisterPage extends AppCompatActivity {
     }
 
 
-    private Boolean validate() {
+    private Boolean valid() {
         Boolean result = false;
         String name = registerUsername.getText().toString();
         String address = registerAddress.getText().toString();
@@ -81,8 +85,9 @@ public class RegisterPage extends AppCompatActivity {
         String password = registerPassword.getText().toString();
         String email = registerEmail.getText().toString();
 
-        if (name.isEmpty() && address.isEmpty() && number.isEmpty() && password.isEmpty() && email.isEmpty()) {
+        if (name.isEmpty() || address.isEmpty() || number.isEmpty() || password.isEmpty() || email.isEmpty()) {
             Toast.makeText(this, "Please fill in all required spaces", Toast.LENGTH_LONG).show();
+            //to make sure all required fields are filled in
         } else {
             result = true;
         }

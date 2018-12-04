@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.b00682737.maryportholidaypark">
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +20,9 @@
         <activity android:name=".RegisterPage" />
         <activity android:name=".ProfilePage" />
         <activity android:name=".BookingPage" />
-        <activity android:name=".CancelBooking"></activity>
+        <activity android:name=".CancelBooking" >
+
+        </activity>
     </application>
 
 </manifest>

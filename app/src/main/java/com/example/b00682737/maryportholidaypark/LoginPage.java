@@ -33,6 +33,7 @@ public class LoginPage extends AppCompatActivity {
         loginUsername = (EditText) findViewById(R.id.loginUsername);
         loginPassword = (EditText) findViewById(R.id.loginPassword);
         registerHere = (TextView) findViewById(R.id.registerHere);
+
         Attempts = (TextView) findViewById(R.id.Attempts);
         Attempts.setText("Attempts remaining: 3");
         //this will display the remaining login attempts left under the login button
@@ -47,7 +48,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validate(loginUsername.getText().toString(), loginPassword.getText().toString());
-            } //this will log the user in if username and password are correct/ stored in database
+            } //this will log the user in if username and password are correct (will be validated against database)
         });
         registerHere.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +70,7 @@ public class LoginPage extends AppCompatActivity {
                 } else {
                     Toast.makeText(LoginPage.this, "Error, failed Login", Toast.LENGTH_SHORT).show();
                     remaining --; //will decrease login attempts
+
                     Attempts.setText("Number of attempts left: " + remaining);
                     if(remaining ==0 ) {loginButton.setEnabled(false);}
                     //this will disable login button after 3 incorrect attempts
