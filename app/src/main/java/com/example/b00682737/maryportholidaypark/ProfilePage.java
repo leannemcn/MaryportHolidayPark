@@ -18,11 +18,9 @@ public class ProfilePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_page);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        signOut = (Button) findViewById(R.id.signOut);
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +35,6 @@ public class ProfilePage extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.my_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -45,18 +42,6 @@ public class ProfilePage extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.makeABooking) {
-            Intent myintent = new Intent(ProfilePage.this, BookingPage.class);
-            ProfilePage.this.startActivity(myintent); //to display the booking page once selected
-
-            return false;
-
-
-        } if (id == R.id.cancelBooking) {
-               Intent cancelintent = new Intent(ProfilePage.this, CancelBooking.class);
-                ProfilePage.this.startActivity(cancelintent); //to display the cancel booking page
-
-               return false; }
 
         return super.onOptionsItemSelected(item);
             }
