@@ -1,9 +1,22 @@
 <resources>
     <string name="app_name">Maryport Holiday Park</string>
+    <string name="app_version">1.1.0</string>
     <string name="create_booking">Create Booking</string>
     <string name="extraoption_title">Please select any of the extras if required</string>
     <string name="bedroomnumber_title">Please select the number of bedrooms</string>
     <string name="booking_title">Please fill out the details below before making a booking</string>
+
+    <string name="title_name">Name</string>
+    <string name="title_email">Email</string>
+    <string name="title_phone">Phone</string>
+    <string name="title_address">Address</string>
+    <string name="title_password">Password</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="name">Name</string>
+    <string name="caravan">Caravan</string>
+
+
 
     <array name = "bedroom">
         <item>Two Bed</item>
