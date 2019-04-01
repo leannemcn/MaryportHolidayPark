@@ -16,6 +16,9 @@
     <string name="name">Name</string>
     <string name="caravan">Caravan</string>
 
+    <string name="edit_booking">Edit Booking</string>
+    <string name="cancel_booking">Cancel Booking</string>
+
 
 
     <array name = "bedroom">
