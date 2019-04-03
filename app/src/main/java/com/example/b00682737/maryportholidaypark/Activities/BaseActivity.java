@@ -57,23 +57,12 @@ public class BaseActivity extends AppCompatActivity {
 
     Context mContext;
     BookingApplication mMyApp;
-    Typeface mAppFont;
     protected ProgressDialog mProgress;
-
-    public Bitmap getmBitmap() {
-        return mBitmap;
-    }
-
-    public void setmBitmap(Bitmap mBitmap) {
-        this.mBitmap = mBitmap;
-    }
 
     protected Bitmap mBitmap;
 
     SharedPreferences mSettings;
 
-    String mUserId;
-    int mUserType;
 
     public static final String GLOBAL_SETTING = "cscs";
 
@@ -81,11 +70,8 @@ public class BaseActivity extends AppCompatActivity {
     protected static final int REQUEST_LOCATION = 200;
     protected static final int REQUEST_CAMERA = 300;
     protected static final int REQUEST_ALBUM = 400;
-    protected static final int REQUEST_CROP = 500;
 
     // Permission Requests
-    protected static final int PERMISSION_REQUEST_CODE_CAMERA = 100;
-    protected static final String[] PERMISSION_REQUEST_CAMERA_STRING = {Manifest.permission.CAMERA};
 
     protected static final int PERMISSION_REQUEST_CODE_PHOTO = 101;
     protected static final String[] PERMISSION_REQUEST_PHOTO_STRING = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -140,30 +126,6 @@ public class BaseActivity extends AppCompatActivity {
         return context.getApplicationContext().getSharedPreferences(GLOBAL_SETTING, Context.MODE_PRIVATE);
     }
 
-    public void savePreferences(String key, String value) {
-        SharedPreferences sharedPreferences = getPreferences(this);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(key, value);
-        editor.commit();
-    }
-
-    public String loadPreferences(String key) {
-        try {
-            SharedPreferences sharedPreferences = getSharedPreferences(GLOBAL_SETTING, MODE_PRIVATE);
-            String strSavedMemo = sharedPreferences.getString(key, "");
-            return strSavedMemo;
-        } catch (NullPointerException nullPointerException) {
-
-            return null;
-        }
-    }
-
-    public boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
 
     public void showProgressDialog() {
         if (mProgress.isShowing())
@@ -178,99 +140,12 @@ public class BaseActivity extends AppCompatActivity {
             mProgress.dismiss();
     }
 
-    // Remove EditText Keyboard
-    public void hideKeyboard(EditText et) {
-        if (et != null) {
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(et.getWindowToken(), 0);
-        }
-    }
-
-    public void hideKeyboard() {
-        InputMethodManager imm = (InputMethodManager) BaseActivity.this.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        View view = BaseActivity.this.getCurrentFocus();
-        if (view == null) {
-            view = new View(BaseActivity.this);
-        }
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-    }
-
-    /****** CHECK NETWORK CONNECTION *******/
-    public static boolean isOnline(Context conn) {
-        ConnectivityManager cm = (ConnectivityManager) conn.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnected()) {
-            return true;
-        }
-        return false;
-    }
-
-
-    public void msg(int resId) {
-        String msg = getString(resId);
-        AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
-        alert.setMessage(msg);
-        alert.setPositiveButton(getString(R.string.ok),
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        alert.show();
-    }
-
-    public void msg(String msg) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(mContext, R.style.AlertDialogTheme);
-        alert.setMessage(msg);
-        alert.setPositiveButton(getString(R.string.ok),
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        AlertDialog alertDialog = alert.show();
-    }
-
-    public void closeMsg(int msgId) {
-        closeMsg(getString(msgId));
-    }
-
-    public void closeMsg(String msg) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(mContext, R.style.AlertDialogTheme);
-        alert.setMessage(msg);
-        alert.setPositiveButton(getString(R.string.alert_close),
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                });
-        AlertDialog alertDialog = alert.show();
-
-    }
-
     public void showToastMessage(String msg) {
         if(!TextUtils.isEmpty(msg)) {
             Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void showToastMessage(int msgId) {
-        String msg = getString(msgId);
-        showToastMessage(msg);
-    }
-
-    public void showAlert(int resId) {
-        String alertMsg = getString(resId);
-        showAlert(alertMsg, null);
-    }
-
-    public void showAlert(int resId, View.OnClickListener clickListener) {
-        String alertMsg = getString(resId);
-        showAlert(alertMsg, clickListener);
-    }
 
     public void showAlert(String message) {
         showAlert(message, null);
@@ -301,113 +176,6 @@ public class BaseActivity extends AppCompatActivity {
         errorDlg.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
     }
 
-    public final static boolean isValidEmail(CharSequence target) {
-        return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches();
-    }
-
-    //*****************************************************************
-    public static boolean isValidPassword(final String password) {
-
-        Pattern pattern;
-        Matcher matcher;
-        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
-        pattern = Pattern.compile(PASSWORD_PATTERN);
-        matcher = pattern.matcher(password);
-
-        return matcher.matches();
-
-    }
-
-    public boolean isPasswordValid(String password) {
-        return password.length() >= 5;
-    }
-
-    public boolean isEmailValid(CharSequence target) {
-        return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
-    }
-
-    protected void openLink(String link) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
-        startActivity(browserIntent);
-    }
-
-    protected String getAndroidId() {
-        TelephonyManager tm =
-                (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
-        String androidId = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
-        Log.d("ID", "Android ID: " + androidId);
-        return androidId;
-    }
-
-    protected boolean isLocationEnabled() {
-        LocationManager lm = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);
-        boolean gps_enabled = false;
-        boolean network_enabled = false;
-
-        try {
-            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
-        } catch (Exception ex) {
-        }
-
-        try {
-            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-        } catch (Exception ex) {
-        }
-
-        if (gps_enabled || network_enabled) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * Function to show settings alert dialog
-     */
-    public void showLocationSettingsAlert() {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext, R.style.AlertDialogTheme);
-
-        // Setting Dialog Title
-        alertDialog.setTitle("GPS is settings");
-
-        // Setting Dialog Message
-        alertDialog.setMessage("GPS is not enabled. Do you want to go to settings menu?");
-
-        // Setting Icon to Dialog
-        //alertDialog.setIcon(R.drawable.delete);
-
-        // On pressing Settings button
-        alertDialog.setPositiveButton("Settings", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                startActivityForResult(intent, REQUEST_LOCATION);
-            }
-        });
-
-        // on pressing cancel button
-        alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-
-        // Showing Alert Message
-        alertDialog.show();
-    }
-
-    private static float getPixelScaleFactor(Context context) {
-        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
-        return (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT);
-    }
-
-
-    public static int dpToPx(Context context, int dp) {
-        return (int) (dp * context.getResources().getDisplayMetrics().density);
-    }
-
-    public static int pxToDp(Context context, int px) {
-        return (int) (px / context.getResources().getDisplayMetrics().density);
-    }
 
     protected void shareApp() {
         try {
@@ -455,9 +223,8 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-    // ---------------------- User Profile Photo ------------------------
+   //the profile photo for users
     protected String strCameraOutputFilePath;
-    protected String strCropedFilePath;
 
     // image crop parameter
     protected static final String TYPE_IMAGE = "image/*";
@@ -543,39 +310,6 @@ public class BaseActivity extends AppCompatActivity {
         customDlg.show();
     }
 
-    public Bitmap getRealBitmap(Bitmap bitmap, String photoPath) {
-        ExifInterface ei = null;
-        try {
-            ei = new ExifInterface(photoPath);
-            int orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION,
-                    ExifInterface.ORIENTATION_UNDEFINED);
-
-            Bitmap rotatedBitmap = null;
-            switch(orientation) {
-
-                case ExifInterface.ORIENTATION_ROTATE_90:
-                    rotatedBitmap = rotateImage(bitmap, 90);
-                    break;
-
-                case ExifInterface.ORIENTATION_ROTATE_180:
-                    rotatedBitmap = rotateImage(bitmap, 180);
-                    break;
-
-                case ExifInterface.ORIENTATION_ROTATE_270:
-                    rotatedBitmap = rotateImage(bitmap, 270);
-                    break;
-
-                case ExifInterface.ORIENTATION_NORMAL:
-                default:
-                    rotatedBitmap = bitmap;
-            }
-
-            return rotatedBitmap;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return bitmap;
-        }
-    }
 
     public static Bitmap rotateImage(Bitmap source, float angle) {
         Matrix matrix = new Matrix();
@@ -618,19 +352,6 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    public String getRealPathFromURI(Uri contentUri) {
-
-        // can post image
-        String[] proj = { MediaStore.Images.Media.DATA };
-        Cursor cursor = getContentResolver().query(contentUri, proj,
-                null, // WHERE clause; which rows to return (all rows)
-                null, // WHERE clause selection arguments (none)
-                null); // Order-by clause (ascending by name)
-        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-        cursor.moveToFirst();
-
-        return cursor.getString(column_index);
-    }
 
     public File makeTempFile(String suffix) {
 
@@ -665,9 +386,7 @@ public class BaseActivity extends AppCompatActivity {
         }
         return tempImage;
     }
-    //----------------------------------------------------------------------------------------------------
 
-    // This will be used in Android6.0(Marshmallow) or above
     public static boolean checkPermissions(Context context, String[] permissions, boolean showHintMessage, int requestCode) {
 
         if (permissions == null || permissions.length == 0)
