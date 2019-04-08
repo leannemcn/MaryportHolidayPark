@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".Activities.BookingDetailsActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"></android.support.v4.view.ViewPager>
+
+        <com.example.b00682737.maryportholidaypark.design.PageNavigator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding4">
+
+            <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
+                android:id="@+id/tvCaravanName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_caravanid"
+                android:drawablePadding="@dimen/padding4"
+                android:gravity="left|center_vertical"
+                android:text="Canny"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_marginTop="@dimen/padding3"
+                android:layout_marginRight="@dimen/padding3"
+                android:background="@color/semiwhite" />
+
+            <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/padding4"
+                android:gravity="left|center_vertical"
+                android:text="2019-03-25"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7" />
+
+            <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
+                android:id="@+id/tvDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:drawableLeft="@drawable/ic_checkoutdays"
+                android:drawablePadding="@dimen/padding4"
+                android:gravity="left|center_vertical"
+                android:text="7 Days"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7" />
+
+            <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:drawableLeft="@drawable/ic_pound"
+                android:drawablePadding="@dimen/padding4"
+                android:gravity="left|center_vertical"
+                android:text="300"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_marginTop="@dimen/padding3"
+                android:layout_marginRight="@dimen/padding3"
+                android:background="@color/semiwhite" />
+
+            <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
+                android:id="@+id/tvBeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:drawableLeft="@drawable/ic_beds"
+                android:drawablePadding="@dimen/padding4"
+                android:gravity="left|center_vertical"
+                android:text="7 Days"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7" />
+
+            <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
+                android:id="@+id/tvFuniture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:drawableLeft="@drawable/ic_funiture"
+                android:drawablePadding="@dimen/padding4"
+                android:gravity="left|center_vertical"
+                android:text="7 Days"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_7" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/padding3"
+                android:layout_marginTop="@dimen/padding3"
+                android:layout_marginRight="@dimen/padding3"
+                android:background="@color/semiwhite" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
