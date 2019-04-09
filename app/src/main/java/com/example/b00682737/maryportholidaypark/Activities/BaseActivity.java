@@ -62,6 +62,9 @@ public class BaseActivity extends AppCompatActivity {
     protected Bitmap mBitmap;
 
     SharedPreferences mSettings;
+    protected AppSettings appSettings;
+    String mUserId;
+    int mUserType;
 
 
     public static final String GLOBAL_SETTING = "cscs";
@@ -95,6 +98,7 @@ public class BaseActivity extends AppCompatActivity {
         mMyApp = (BookingApplication) getApplication();
 
         mSettings = getPreferences(this);
+        appSettings = new AppSettings(mContext);
 
         mProgress = new ProgressDialog(mContext, R.style.DialogTheme);
         mProgress.setMessage(getString(R.string.loading));
@@ -139,6 +143,22 @@ public class BaseActivity extends AppCompatActivity {
         if (mProgress.isShowing())
             mProgress.dismiss();
     }
+    // Remove EditText Keyboard
+    public void hideKeyboard(EditText et) {
+        if (et != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(et.getWindowToken(), 0);
+        }
+    }
+
+    public void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) BaseActivity.this.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        View view = BaseActivity.this.getCurrentFocus();
+        if (view == null) {
+            view = new View(BaseActivity.this);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
 
     public void showToastMessage(String msg) {
         if(!TextUtils.isEmpty(msg)) {
@@ -174,6 +194,9 @@ public class BaseActivity extends AppCompatActivity {
 
         errorDlg.show();
         errorDlg.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+    }
+    public final static boolean isValidEmail(CharSequence target) {
+        return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 
 

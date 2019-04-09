@@ -15,8 +15,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.android.gms.maps.CameraUpdateFactory;
 
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class ContactUsActivity extends BaseActivity implements View.OnClickListener, OnMapReadyCallback {
     FirebaseAuth mAuth;
@@ -62,10 +68,10 @@ public class ContactUsActivity extends BaseActivity implements View.OnClickListe
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng McNichollCaravans = new LatLng(54.670930, -4.882914);
-        mMap.addMarker(new MarkerOptions().position(McNichollCaravans).title("Maryport Drummore Stranraer DG9 9RD"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(McNichollCaravans));
+        // Move the map location to the park
+        LatLng MaryportHolidayPark = new LatLng(54.670930, -4.882914);
+        mMap.addMarker(new MarkerOptions().position(MaryportHolidayPark).title("Maryport Drummore Stranraer DG9 9RD"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(MaryportHolidayPark));
     }
 
     @Override

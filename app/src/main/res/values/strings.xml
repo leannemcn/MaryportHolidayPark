@@ -18,6 +18,11 @@
 
     <string name="edit_booking">Edit Booking</string>
     <string name="cancel_booking">Cancel Booking</string>
+    <string name="title_new_booking">New Booking</string>
+    <string name="title_edit_booking">Edit Booking</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_booking_info">Booking Information</string>
+
 
 
 
