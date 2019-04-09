@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    tools:context=".Activities.ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding5"
+        android:layout_marginLeft="@dimen/padding5"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/padding5"
+        android:layout_marginRight="@dimen/padding5"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.example.b00682737.maryportholidaypark.design.ResizableImageView
+                android:id="@+id/resizableImageView"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_aboutme" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding3"
+                android:textColorHint="#80ffffff">
+
+                <com.example.b00682737.maryportholidaypark.design.OpenSansEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/title_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text|textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#80ffffff"
+                    android:textSize="@dimen/font_4" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding2"
+                android:textColorHint="#80ffffff">
+
+                <com.example.b00682737.maryportholidaypark.design.OpenSansEditText
+                    android:id="@+id/etUserEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/title_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#80ffffff"
+                    android:textSize="@dimen/font_4" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding2"
+                android:textColorHint="#80ffffff">
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding2"
+                android:textColorHint="#80ffffff">
+
+                <com.example.b00682737.maryportholidaypark.design.OpenSansEditText
+                    android:id="@+id/etUserAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/title_address"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPostalAddress"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#80ffffff"
+                    android:textSize="@dimen/font_4" />
+            </android.support.design.widget.TextInputLayout>
+
+            <com.example.b00682737.maryportholidaypark.design.OpenSansButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding6"
+                android:layout_marginBottom="@dimen/padding5"
+                android:background="@drawable/selector_whiteround"
+                android:text="@string/title_update"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_4" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/white" />
+
+            <com.example.b00682737.maryportholidaypark.design.OpenSansEditText
+                android:id="@+id/etUserPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="@string/title_phone"
+                android:imeOptions="actionNext"
+                android:inputType="textPhonetic"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="#80ffffff"
+                android:textSize="@dimen/font_4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.b00682737.maryportholidaypark.design.OpenSansButton
+                    android:id="@+id/btnViewCurrentBookings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding6"
+                    android:layout_marginBottom="@dimen/padding5"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_whiteround"
+                    android:padding="@dimen/padding1"
+                    android:text="@string/title_view_current_booking"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_4" />
+
+                <com.example.b00682737.maryportholidaypark.design.OpenSansButton
+                    android:id="@+id/btnViewPastBookings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding1"
+                    android:layout_marginTop="@dimen/padding6"
+                    android:layout_marginBottom="@dimen/padding5"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding1"
+                    android:background="@drawable/selector_whiteround"
+                    android:text="@string/title_view_past_booking"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_4" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
