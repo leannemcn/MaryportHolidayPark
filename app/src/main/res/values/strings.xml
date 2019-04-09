@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Maryport Holiday Park</string>
     <string name="app_version">1.1.0</string>
+
     <string name="create_booking">Create Booking</string>
     <string name="extraoption_title">Please select any of the extras if required</string>
     <string name="bedroomnumber_title">Please select the number of bedrooms</string>
@@ -30,18 +31,4 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
 
-
-
-
-
-    <array name = "bedroom">
-        <item>Two Bed</item>
-        <item>Three Bed</item>
-    </array>
-
-    <array name = "extras">
-        <item>Cot</item>
-        <item>High Chair</item>
-        <item>WIFI</item>
-    </array>
 </resources>

@@ -76,14 +76,14 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.example.b00682737.maryportholidaypark.design.RadioButtonView
+                    <com.example.b00682737.maryportholidaypark.design.OpenSansRadioButton
                         android:id="@+id/radio_carnaby"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
                         android:text="Carnaby" />
 
-                    <com.example.b00682737.maryportholidaypark.design.RadioButtonView
+                    <com.example.b00682737.maryportholidaypark.design.OpenSansRadioButton
                         android:id="@+id/radio_delta"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

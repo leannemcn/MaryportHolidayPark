@@ -4,19 +4,19 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
-public class RadioButtonView extends android.support.v7.widget.AppCompatRadioButton {
+public class OpenSansRadioButton extends android.support.v7.widget.AppCompatRadioButton {
 
-    public RadioButtonView(Context context, AttributeSet attrs, int defStyle) {
+    public OpenSansRadioButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }
 
-    public RadioButtonView(Context context, AttributeSet attrs) {
+    public OpenSansRadioButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public RadioButtonView(Context context) {
+    public OpenSansRadioButton(Context context) {
         super(context);
         init();
     }
