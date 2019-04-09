@@ -36,7 +36,7 @@
             <com.example.b00682737.maryportholidaypark.design.ResizableImageView
                 android:id="@+id/resizableImageView"
                 android:layout_width="120dp"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:src="@drawable/ic_home_aboutme" />
 
             <android.support.design.widget.TextInputLayout
@@ -85,6 +85,18 @@
                 android:layout_marginTop="@dimen/padding2"
                 android:textColorHint="#80ffffff">
 
+                <com.example.b00682737.maryportholidaypark.design.OpenSansEditText
+                    android:id="@+id/etUserPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/title_phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPhonetic"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#80ffffff"
+                    android:textSize="@dimen/font_4" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -124,19 +136,6 @@
                 android:layout_height="1px"
                 android:background="@color/white" />
 
-            <com.example.b00682737.maryportholidaypark.design.OpenSansEditText
-                android:id="@+id/etUserPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:hint="@string/title_phone"
-                android:imeOptions="actionNext"
-                android:inputType="textPhonetic"
-                android:maxLines="1"
-                android:textColor="@android:color/white"
-                android:textColorHint="#80ffffff"
-                android:textSize="@dimen/font_4" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -172,5 +171,4 @@
 
         </LinearLayout>
     </ScrollView>
-
 </android.support.constraint.ConstraintLayout>
