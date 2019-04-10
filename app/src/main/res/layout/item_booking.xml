@@ -11,7 +11,6 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,9 +35,9 @@
                     android:id="@+id/tvCaravanName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Event Name"
                     android:drawableLeft="@drawable/ic_caravanid_small"
                     android:drawablePadding="@dimen/padding1"
-                    android:text="Event Name"
                     android:textColor="@color/app_grey_dark"
                     android:textSize="@dimen/font_5" />
 
@@ -51,60 +50,59 @@
                     <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
                         android:id="@+id/tvDate"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableLeft="@drawable/ic_calendar_small"
-                        android:drawablePadding="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Event Time"
+                        android:drawableLeft="@drawable/ic_calendar_small"
+                        android:drawablePadding="@dimen/padding1"
                         android:textColor="@color/app_grey"
-                        android:textSize="14.0sp" />
-
+                        android:textSize="@dimen/font_7" />
 
                     <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
                         android:id="@+id/tvDays"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:drawableLeft="@drawable/ic_checkoutdays_small"
-                        android:drawablePadding="5dp"
+                        android:layout_height="wrap_content"
                         android:text="Event Time"
+                        android:layout_marginLeft="@dimen/padding1"
+                        android:drawableLeft="@drawable/ic_checkoutdays_small"
+                        android:drawablePadding="@dimen/padding1"
                         android:textColor="@color/app_grey"
-                        android:textSize="14.0sp" />
+                        android:textSize="@dimen/font_7" />
                 </LinearLayout>
 
                 <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
                     android:id="@+id/tvPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:drawableLeft="@drawable/ic_pound_small"
-                    android:drawablePadding="5dp"
+                    android:layout_marginTop="@dimen/padding1"
                     android:text="Event Description"
+                    android:drawableLeft="@drawable/ic_pound_small"
+                    android:drawablePadding="@dimen/padding1"
                     android:textColor="@color/app_grey"
-                    android:textSize="12.0sp" />
+                    android:textSize="@dimen/font_8" />
 
                 <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
                     android:id="@+id/tvBeds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:drawableLeft="@drawable/ic_beds_small"
-                    android:drawablePadding="5dp"
+                    android:layout_marginTop="@dimen/padding1"
                     android:text="Event Description"
+                    android:drawableLeft="@drawable/ic_beds_small"
+                    android:drawablePadding="@dimen/padding1"
                     android:textColor="@color/app_grey"
-                    android:textSize="12.0sp" />
+                    android:textSize="@dimen/font_8" />
 
                 <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
                     android:id="@+id/tvFuniture"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:drawableLeft="@drawable/ic_funiture_small"
-                    android:drawablePadding="5dp"
+                    android:layout_marginTop="@dimen/padding1"
                     android:text="Event Description"
+                    android:drawableLeft="@drawable/ic_funiture_small"
+                    android:drawablePadding="@dimen/padding1"
                     android:textColor="@color/app_grey"
-                    android:textSize="12.0sp" />
+                    android:textSize="@dimen/font_8" />
             </LinearLayout>
 
         </LinearLayout>
@@ -114,8 +112,8 @@
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_expired"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:src="@drawable/ic_expired"/>
     </FrameLayout>
 
 
