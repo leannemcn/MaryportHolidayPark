@@ -57,7 +57,7 @@ public class AdminHomeActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        // Handle navigation view item 
+        // Handle navigation view item
         int id = menuItem.getItemId();
 
         if (id == R.id.nav_allbooking) {

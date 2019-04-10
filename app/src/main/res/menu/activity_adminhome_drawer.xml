@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_allbooking"
+            android:icon="@drawable/ic_menu_newbooking"
+            android:title="All Bookings" />
+
+        <item
+            android:id="@+id/nav_allmessages"
+            android:icon="@drawable/ic_menu_contactus"
+            android:title="All Messages" />
+
+    </group>
+
+    <item android:title="Common">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_exit_app"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

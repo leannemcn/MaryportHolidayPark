@@ -30,5 +30,11 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
+    <string name="title_password_confirm">Confirm Password</string>
+    <string name="title_signup">Sign Up</string>
+    <string name="title_signin_hint">Already Signed up? Log in</string>
+    <string name="title_signin">Sign In</string>
+    <string name="title_signup_hint">Not a member?</string>
+    <string name="title_register_now">Signup!</string>
 
 </resources>
