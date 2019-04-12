@@ -24,6 +24,7 @@ import com.example.b00682737.maryportholidaypark.Fragments.ParkFragment;
 import com.example.b00682737.maryportholidaypark.Fragments.ProfileFragment;
 import com.example.b00682737.maryportholidaypark.Models.FBbooking;
 import com.example.b00682737.maryportholidaypark.RentalCaravans;
+import com.example.b00682737.maryportholidaypark.Utils.Utils;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
