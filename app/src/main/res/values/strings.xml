@@ -39,4 +39,8 @@
 
     <string name="loading">Loading...</string>
 
+    <string name="title_activity_home">Maryport Holiday Park</string>
+    <string name="title_messages">Messages</string>
+    <string name="title_all_bookings">All Bookings</string>
+
 </resources>

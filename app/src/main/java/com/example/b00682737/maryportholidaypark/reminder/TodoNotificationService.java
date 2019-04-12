@@ -12,3 +12,17 @@ import android.util.Log;
 
 import com.example.b00682737.maryportholidaypark.Activities.UserHomeActivity;
 
+public class TodoNotificationService extends IntentService {
+
+    public static final String TODOTEXT = "toDoTextString";
+    public static final String TODOUUID = "toDoUUIDString";
+
+    private String mTodoText;
+    private int mChecklistId;
+    private Context mContext;
+
+    public TodoNotificationService() {
+        super("TodoNotificationService");
+    }
+
+}

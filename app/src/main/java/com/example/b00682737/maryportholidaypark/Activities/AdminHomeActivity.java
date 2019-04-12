@@ -43,6 +43,7 @@ public class AdminHomeActivity extends BaseActivity implements View.OnClickListe
 
         findViewById(R.id.btnAllBooking).setOnClickListener(this);
         findViewById(R.id.btnAllMessages).setOnClickListener(this);
+        findViewById(R.id.btnHistogram).setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +53,8 @@ public class AdminHomeActivity extends BaseActivity implements View.OnClickListe
             showAllBookings(); //display all bookings
         } else if (viewId == R.id.btnAllMessages) {
             showAllMessages(); //display all messages
+        }else if (viewId == R.id.btnHistogram) {
+            showHistogram();
         }
     }
 
@@ -64,6 +67,8 @@ public class AdminHomeActivity extends BaseActivity implements View.OnClickListe
             showAllBookings();
         } else if (id == R.id.nav_allmessages) {
             showAllMessages();
+        }else if (id == R.id.nav_histogram) {
+            showHistogram();
         } else if (id == R.id.nav_share) {
             shareApp();
         } else if (id == R.id.nav_logout) {
@@ -81,6 +86,10 @@ public class AdminHomeActivity extends BaseActivity implements View.OnClickListe
 
     private void showAllMessages() {
         startActivity(new Intent(mContext, AdminMessageListActivity.class));
+    }
+
+    private void showHistogram() {
+        startActivity(new Intent(mContext, AdminHistogramActivity.class));
     }
 
     // Back Button Action

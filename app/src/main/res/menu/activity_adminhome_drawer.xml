@@ -19,6 +19,11 @@
             android:icon="@drawable/ic_menu_contactus"
             android:title="All Messages" />
 
+        <item
+            android:id="@+id/nav_histogram"
+            android:icon="@drawable/ic_menu_mybooking1"
+            android:title="Histogram" />
+
     </group>
 
     <item android:title="Common">

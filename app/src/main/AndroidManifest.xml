@@ -17,16 +17,60 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Activities.Login"></activity>
+
+        <activity
+            android:name=".Activities.SignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar"></activity>
+
+        <activity
+            android:name=".Activities.SignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionbar" />
+
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Activities.UserHomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Activities.NewBookingActivity"
             android:label="@string/title_new_booking"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"></activity>
+
         <activity
             android:name=".Activities.EditBookingActivity"
             android:label="@string/title_edit_booking"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:label="@string/title_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+
         <activity
             android:name=".Activities.BookingDetailsActivity"
             android:label="@string/title_booking_info"
@@ -38,11 +82,42 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"></activity>
+
+
+        <activity
+            android:name=".Activities.AdminHistogramActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+
         <activity
             android:name=".Activities.ContactUsActivity"
             android:label="@string/title_profile"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".Activities.AdminHomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Activities.AdminMessageListActivity"
+            android:label="@string/title_messages"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".Activities.AdminBookingListActivity"
+            android:label="@string/title_all_bookings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity android:name=".Activities.DeltaList"></activity>
+        <activity android:name=".Activities.CarnabyList" />
+        <activity android:name=".Activities.Booking" />
+
         <activity
             android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
             android:launchMode="singleTask">
@@ -56,7 +131,7 @@
             </intent-filter>
         </activity>
 
-
+        <service android:name=".reminder.TodoNotificationService" />
     </application>
 
 </manifest>

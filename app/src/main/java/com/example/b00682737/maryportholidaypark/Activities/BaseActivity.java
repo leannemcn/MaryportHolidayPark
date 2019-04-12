@@ -220,7 +220,7 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    //List and Signout options at the top of the home page. Possibility of being used as navigation.
+    //List and Signout options at the top of the home page
     protected void Signout() {
         final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
@@ -494,7 +494,7 @@ public class BaseActivity extends AppCompatActivity {
             PendingIntent pi = PendingIntent.getService(mContext, requestCode, i, PendingIntent.FLAG_NO_CREATE);
             pi.cancel();
             getAlarmManager().cancel(pi);
-            Log.d("OskarSchindler", "PI Cancelled " + doesPendingIntentExist(i, requestCode));
+            Log.d("Alarm", "PI Cancelled " + doesPendingIntentExist(i, requestCode));
         }
     }
 

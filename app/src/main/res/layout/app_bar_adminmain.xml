@@ -24,7 +24,8 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
         </android.support.design.widget.AppBarLayout>
 
-        <include layout="@layout/content_adminmain" />
+        <include
+            layout="@layout/content_adminmain"/>
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
