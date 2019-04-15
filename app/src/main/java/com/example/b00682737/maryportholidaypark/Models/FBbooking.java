@@ -114,5 +114,4 @@ public class FBbooking implements Parcelable {
         dest.writeString(key);
     }
 }
-}
 

@@ -17,6 +17,11 @@
     <string name="name">Name</string>
     <string name="caravan">Caravan</string>
 
+    <!-- Sharing App -->
+    <string name="share_title">Share</string>
+    <string name="share_subject">You have been Invited to join Maryport Holiday Park App.</string>
+    <string name="share_body">Check out the MDF app.!\n https://play.google.com/store/apps/details?id=com.example.b00682737.maryportholidaypark</string>
+
     <string name="edit_booking">Edit Booking</string>
     <string name="cancel_booking">Cancel Booking</string>
     <string name="title_new_booking">New Booking</string>

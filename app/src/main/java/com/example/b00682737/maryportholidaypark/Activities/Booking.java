@@ -104,7 +104,7 @@ public class Booking extends BaseActivity{
         imgDelta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent DeltaListIntent = new Intent(Booking.this, DeltaListActivity.class);
+                Intent DeltaListIntent = new Intent(Booking.this, DeltaList.class);
                 startActivity(DeltaListIntent);
             }
         });

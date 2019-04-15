@@ -61,5 +61,4 @@ public class BookingListActivity extends BaseActivity {
         return result;
     }
 }
-}
 
