@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import com.example.b00682737.maryportholidaypark.R;
 
 import com.example.b00682737.maryportholidaypark.FirebaseInfo;
 import com.example.b00682737.maryportholidaypark.Models.FBbooking;

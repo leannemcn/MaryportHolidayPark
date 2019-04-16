@@ -1,0 +1,11 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="ic_menu_home" type="drawable">@drawable/ic_menu_home1</item>
+    <item name="ic_menu_newbooking" type="drawable">@drawable/ic_menu_newbooking1</item>
+    <item name="ic_menu_mybooking" type="drawable">@drawable/ic_menu_mybooking1</item>
+    <item name="ic_menu_contactus" type="drawable">@drawable/ic_menu_contactus1</item>
+    <item name="ic_menu_person" type="drawable">@drawable/ic_menu_peson1</item>
+    <item name="ic_menu_share" type="drawable">@drawable/ic_menu_share1</item>
+    <item name="ic_menu_exit_app" type="drawable">@drawable/ic_menu_exit_app1</item>
+
+    <item name="ic_menu_delete" type="drawable">@drawable/ic_menu_delete1</item>
+</resources>

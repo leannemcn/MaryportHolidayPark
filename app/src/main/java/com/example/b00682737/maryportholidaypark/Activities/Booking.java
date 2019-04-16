@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
@@ -28,6 +27,7 @@ import com.braintreepayments.api.dropin.DropInRequest;
 import com.braintreepayments.api.dropin.DropInResult;
 import com.example.b00682737.maryportholidaypark.RentalCaravans;
 import com.example.b00682737.maryportholidaypark.Models.FBbooking;
+import com.example.b00682737.maryportholidaypark.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -47,6 +47,8 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+
+import cz.msebera.android.httpclient.Header;
 
 public class Booking extends BaseActivity{
     private static final int REQUEST_CODE = 1001;
@@ -238,14 +240,14 @@ public class Booking extends BaseActivity{
         AsyncHttpClient client = new AsyncHttpClient(true,80,443);;
         client.get(RentalCaravans.SERVERURL + "/client_token", new TextHttpResponseHandler() {
             @Override
-            public void onSuccess(int statusCode, PreferenceActivity.Header[] headers, String clientToken) {
+            public void onSuccess(int statusCode, Header[] headers, String clientToken) {
                 DropInRequest dropInRequest = new DropInRequest()
                         .clientToken(clientToken);
                 startActivityForResult(dropInRequest.getIntent(Booking.this), REQUEST_CODE);
             }
 
             @Override
-            public void onFailure(int statusCode, PreferenceActivity.Header[] headers, String responseString, Throwable throwable) {
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 Log.d("Debug", "123");
             }
         });

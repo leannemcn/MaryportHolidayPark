@@ -24,6 +24,31 @@ public class AppSettings {
         this.appSharedPrefs = context.getSharedPreferences(APP_SHARED_PREFS, Activity.MODE_PRIVATE);
         this.prefsEditor = appSharedPrefs.edit();
     }
+    public String getString(String key) {
+        return appSharedPrefs.getString(key, "");
+    }
+
+    public int getInt(String key) {
+        return appSharedPrefs.getInt(key, 0);
+    }
+
+    public long getLong(String key) {
+        return appSharedPrefs.getLong(key, 0);
+    }
+
+    public boolean getBoolean(String key) {
+        return appSharedPrefs.getBoolean(key, false);
+    }
+
+    public void putString(String key, String value) {
+        prefsEditor.putString(key, value);
+        prefsEditor.commit();
+    }
+
+    public void putInt(String key, int value) {
+        prefsEditor.putInt(key, value);
+        prefsEditor.commit();
+    }
     private String USER_NAME = "USER_NAME";
     private String USER_EMAIL = "USER_EMAIL";
     private String USER_PHONE = "USER_PHONE";

@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.b00682737.maryportholidaypark.R;
 
 import com.example.b00682737.maryportholidaypark.Activities.MainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;

@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.b00682737.maryportholidaypark.R;
+
 public class AdminHomeActivity extends BaseActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +52,9 @@ public class AdminHomeActivity extends BaseActivity implements View.OnClickListe
     public void onClick(View v) {
         int viewId = v.getId();
         if (viewId == R.id.btnAllBooking) {
-            showAllBookings(); //display all bookings
+            showAllBookings();
         } else if (viewId == R.id.btnAllMessages) {
-            showAllMessages(); //display all messages
+            showAllMessages();
         }else if (viewId == R.id.btnHistogram) {
             showHistogram();
         }
@@ -60,7 +62,7 @@ public class AdminHomeActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        // Handle navigation view item
+        // Handle navigation view item clicks here.
         int id = menuItem.getItemId();
 
         if (id == R.id.nav_allbooking) {
@@ -69,7 +71,8 @@ public class AdminHomeActivity extends BaseActivity implements View.OnClickListe
             showAllMessages();
         }else if (id == R.id.nav_histogram) {
             showHistogram();
-        } else if (id == R.id.nav_share) {
+        }
+        else if (id == R.id.nav_share) {
             shareApp();
         } else if (id == R.id.nav_logout) {
             Signout();

@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.b00682737.maryportholidaypark.R;
 
 import com.example.b00682737.maryportholidaypark.FirebaseInfo;
 import com.example.b00682737.maryportholidaypark.Models.UserInfo;
@@ -26,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class SignInActivity extends BaseActivity {
+    //Creating variables for all widgets created on the xml page.
     private TextView SignInInfo;
     private Button SignIn;
     private EditText SignInName;
@@ -41,7 +43,7 @@ public class SignInActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-        //Assigning variables an id.
+        //Assigning variables a respective id.
         SignInInfo = (TextView) findViewById(R.id.tvSigninInfo);
         SignIn = (Button) findViewById(R.id.btnSignin);
         SignInName = (EditText) findViewById(R.id.SigninName);
@@ -206,7 +208,7 @@ public class SignInActivity extends BaseActivity {
                 } else {
                     Toast.makeText(SignInActivity.this, "You have failed to login.", Toast.LENGTH_LONG).show();
                     //User has 5 attempts to enter the right information. If they run out of attempts
-                    // the sign in button will be disabled.
+                    // the sign in button will be inactive.
                     counter--;
                     SignInInfo.setText("Attempts Remaining: " + counter);
                     if (counter == 0) {

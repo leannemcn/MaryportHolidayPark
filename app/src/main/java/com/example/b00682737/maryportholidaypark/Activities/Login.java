@@ -3,7 +3,7 @@ package com.example.b00682737.maryportholidaypark.Activities;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-
+import com.example.b00682737.maryportholidaypark.R;
 import com.example.b00682737.maryportholidaypark.Fragments.LoginFragment;
 
 public class Login extends AppCompatActivity {

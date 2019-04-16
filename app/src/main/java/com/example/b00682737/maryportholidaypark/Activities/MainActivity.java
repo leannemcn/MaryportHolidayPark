@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import com.example.b00682737.maryportholidaypark.R;
 
 import com.example.b00682737.maryportholidaypark.Fragments.ParkFragment;
 import com.example.b00682737.maryportholidaypark.Fragments.ProfileFragment;
@@ -131,7 +132,7 @@ public class MainActivity extends AppCompatActivity
                 public void onClick(DialogInterface dialog, int which) {
                     Utils utils = new Utils();
                     utils.logOut();
-                    Intent logoutIntent = new Intent(MainActivity.this, LoginActivity.class);
+                    Intent logoutIntent = new Intent(MainActivity.this, Login.class);
                     startActivity(logoutIntent);
                     finish();
                 }

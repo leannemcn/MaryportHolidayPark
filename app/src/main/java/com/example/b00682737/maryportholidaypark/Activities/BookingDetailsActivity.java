@@ -11,6 +11,7 @@ import com.example.b00682737.maryportholidaypark.Adapters.ImageAdapter;
 import com.example.b00682737.maryportholidaypark.Models.FBbooking;
 import com.example.b00682737.maryportholidaypark.RentalCaravans;
 import com.example.b00682737.maryportholidaypark.design.PageNavigator;
+import com.example.b00682737.maryportholidaypark.R;
 
 public class BookingDetailsActivity extends BaseActivity {
     // Booking Information

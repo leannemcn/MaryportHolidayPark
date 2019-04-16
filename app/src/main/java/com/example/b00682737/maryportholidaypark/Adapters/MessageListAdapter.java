@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import com.example.b00682737.maryportholidaypark.R;
+
+import com.example.b00682737.maryportholidaypark.Activities.AdminMessageListActivity;
 import com.example.b00682737.maryportholidaypark.Models.MessageInfo;
 import java.util.List;
 

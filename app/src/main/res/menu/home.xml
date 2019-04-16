@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/create_booking"
+        android:orderInCategory="100"
+        android:title="@string/create_booking"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/edit_booking"
+        android:orderInCategory="101"
+        android:title="@string/edit_booking"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/cancel_booking"
+        android:orderInCategory="102"
+        android:title="@string/cancel_booking"
+        app:showAsAction="never" />
+</menu>

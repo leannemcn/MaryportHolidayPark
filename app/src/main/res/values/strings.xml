@@ -2,50 +2,108 @@
     <string name="app_name">Maryport Holiday Park</string>
     <string name="app_version">1.1.0</string>
 
-    <string name="create_booking">Create Booking</string>
-    <string name="extraoption_title">Please select any of the extras if required</string>
-    <string name="bedroomnumber_title">Please select the number of bedrooms</string>
-    <string name="booking_title">Please fill out the details below before making a booking</string>
+    <string name="loading">Loading...</string>
+    <string name="saving">Saving...</string>
+    <string name="alert_close">Close</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="or">OR</string>
+    <string name="send">Send</string>
+    <string name="noname"></string>
+    <string name="finish_message">Press again to exit</string>
+    <string name="error_network">Network unavailable, please try again later</string>
+    <string name="error_invalid_credentials">Invalid Credentials.</string>
+    <string name="request_permission_hint">Please allow permissions to use function</string>
+
+    <string name="choose_action">Choose action for photo</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="take_photo">Take Photo</string>
+
+    <!-- Sharing App -->
+    <string name="share_title">Share</string>
+    <string name="share_subject">You have been Invited to join Maryport Holiday Park App.</string>
+    <string name="share_body">Check out the MDF app. It really good!\n https://play.google.com/store/apps/details?id=com.example.b00682737.maryportholidaypark</string>
+
+    <string name="title_activity_home">Maryport Holiday Park</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!--<string name="action_settings">Settings</string>-->
+    <string name="email">Email</string>
+    <string name="pwd">Password</string>
+    <string name="login">Log In</string>
+    <string name="initial_remain_attempts">Attempts Remaining: 3</string>
+    <string name="register">Register Here</string>
+
+    <string name="main_welcomemessage">Welcome to Maryport\nHoliday Park!</string>
+
+    <!--Register Page-->
+    <string name="title_signin">Sign In</string>
+    <string name="title_signup">Sign Up</string>
+    <string name="title_signup_hint">Not a member?</string>
+    <string name="title_signin_hint">Already Signed up? Log in</string>
+    <string name="title_register_now">Signup!</string>
 
     <string name="title_name">Name</string>
     <string name="title_email">Email</string>
     <string name="title_phone">Phone</string>
     <string name="title_address">Address</string>
     <string name="title_password">Password</string>
+    <string name="title_password_confirm">Confirm Password</string>
+    <string name="msg_input_email">Please input your Email</string>
+    <string name="msg_success_sent_mail_for_password">Email was sent for password.</string>
+    <string name="msg_failed_reset_password">Email not found for your password.</string>
+
+    <string name="register_title">Register Page</string>
+    <string name="btn_register">Register</string>
     <string name="phone">Phone</string>
     <string name="address">Address</string>
     <string name="name">Name</string>
-    <string name="caravan">Caravan</string>
 
-    <!-- Sharing App -->
-    <string name="share_title">Share</string>
-    <string name="share_subject">You have been Invited to join Maryport Holiday Park App.</string>
-    <string name="share_body">Check out the MDF app.!\n https://play.google.com/store/apps/details?id=com.example.b00682737.maryportholidaypark</string>
-
+    <!--Caravan Page-->
+    <string name="create_booking">Create Booking</string>
     <string name="edit_booking">Edit Booking</string>
     <string name="cancel_booking">Cancel Booking</string>
+
+    <!--Booking Page-->
+    <string name="booking_title">Please fill out the details below before making a booking</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="bedroomnumber_title">Please select the number of bedrooms</string>
+    <string name="extraoption_title">Please select any of the extras if required</string>
+    <string name="caravan">Caravan</string>
+
+    <string name="msg_encountered_an_unexpected_error">We have encountered an unexpected error while verifying your credentials!</string>
+    <string name="pending_verification">Please wait while admin verify your credentials.</string>
     <string name="title_new_booking">New Booking</string>
     <string name="title_edit_booking">Edit Booking</string>
+
+    <!-- Profile -->
     <string name="title_profile">Profile</string>
-    <string name="title_booking_info">Booking Information</string>
+    <string name="title_update">Update</string>
+    <string name="success_update_profile">Successfully updated Profile.</string>
     <string name="title_view_current_booking">Current\n Booking</string>
     <string name="title_view_past_booking">Past\n Booking</string>
-    <string name="title_update">Update</string>
 
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="title_password_confirm">Confirm Password</string>
-    <string name="title_signup">Sign Up</string>
-    <string name="title_signin_hint">Already Signed up? Log in</string>
-    <string name="title_signin">Sign In</string>
-    <string name="title_signup_hint">Not a member?</string>
-    <string name="title_register_now">Signup!</string>
+    <string name="title_booking_info">Booking Information</string>
 
-    <string name="loading">Loading...</string>
+    <!-- Contact Us -->
+    <string name="error_empty_user_fields">Please input user information</string>
+    <string name="error_invalid_email">Email is invalid</string>
+    <string name="error_empty_message">Message is invalid</string>
 
-    <string name="title_activity_home">Maryport Holiday Park</string>
+    <string name="success_send_message">Thank you for your message. We will reply back to you as soon as possible.</string>
+
+
+    <!-- Admin Messages -->
     <string name="title_messages">Messages</string>
+
+    <!-- Admin Bookings -->
     <string name="title_all_bookings">All Bookings</string>
+
+    <string name="ic_title_reminder">It\'s time for your Booking</string>
 
 </resources>

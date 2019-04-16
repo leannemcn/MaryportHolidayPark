@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import com.example.b00682737.maryportholidaypark.R;
 
 public class ImageFragment extends Fragment {
     private int imageResource;

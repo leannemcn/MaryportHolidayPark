@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import com.example.b00682737.maryportholidaypark.Adapters.CarnabyAdapter;
 import com.example.b00682737.maryportholidaypark.Models.CarnabyModel;
 import com.example.b00682737.maryportholidaypark.RentalCaravans;
+import com.example.b00682737.maryportholidaypark.R;
 
 import java.util.ArrayList;
 

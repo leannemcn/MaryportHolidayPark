@@ -9,6 +9,9 @@ import android.support.annotation.NonNull;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.example.b00682737.maryportholidaypark.R;
+
+
 
 public class SplashActivity extends BaseActivity {
     private long showStartTime;
@@ -109,7 +112,7 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void checkToken() {
-        startActivity(new Intent(mContext, Login.class));
+        startActivity(new Intent(mContext, SignInActivity.class));
         overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
         finish();
     }

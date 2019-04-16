@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.b00682737.maryportholidaypark.R;
 
 import com.example.b00682737.maryportholidaypark.FirebaseInfo;
 import com.example.b00682737.maryportholidaypark.Models.UserInfo;

@@ -23,6 +23,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.example.b00682737.maryportholidaypark.R;
 
 public class ContactUsActivity extends BaseActivity implements View.OnClickListener, OnMapReadyCallback {
     FirebaseAuth mAuth;
@@ -43,6 +44,15 @@ public class ContactUsActivity extends BaseActivity implements View.OnClickListe
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
+        }
+
+        // Check User Information
+        mAuth = FirebaseAuth.getInstance();
+
+        userInfo = appSettings.getUser();
+        if (TextUtils.isEmpty(userInfo.name) || TextUtils.isEmpty(userInfo.email) || mAuth.getCurrentUser() == null) {
+            finish();
+            return;
         }
 
         // Init UI Elements
