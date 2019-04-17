@@ -1,8 +1,14 @@
 package com.example.b00682737.maryportholidaypark;
 
 import android.app.Application;
-
-import com.example.b00682737.maryportholidaypark.Activities.AppSettings;
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 
 public class BookingApplication extends Application {
     private static BookingApplication INSTANCE;

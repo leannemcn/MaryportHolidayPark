@@ -44,8 +44,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.b00682737.maryportholidaypark.AppSettings;
 import com.example.b00682737.maryportholidaypark.BookingApplication;
-import com.example.b00682737.maryportholidaypark.Activities.AppSettings;
 import com.example.b00682737.maryportholidaypark.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -466,10 +466,6 @@ public class BaseActivity extends AppCompatActivity {
 
     // image crop parameter
     protected static final String TYPE_IMAGE = "image/*";
-    protected static final int GAS_IMAGE_ASPECT_X = 3;
-    protected static final int GAS_IMAGE_ASPECT_Y = 2;
-    protected static final int GAS_IMAGE_OUTPUT_X = 750;
-    protected static final int GAS_IMAGE_OUTPUT_Y = 500;
 
     protected static final int CARAVAN_IMAGE_ASPECT_X = 3;
     protected static final int CARAVAN_IMAGE_ASPECT_Y = 2;

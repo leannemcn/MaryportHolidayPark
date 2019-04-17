@@ -61,12 +61,12 @@
                     <com.example.b00682737.maryportholidaypark.design.OpenSansTextView
                         android:id="@+id/tvDays"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="Event Time"
                         android:layout_marginLeft="@dimen/padding1"
+                        android:layout_weight="1"
                         android:drawableLeft="@drawable/ic_checkoutdays_small"
                         android:drawablePadding="@dimen/padding1"
+                        android:text="Event Time"
                         android:textColor="@color/app_grey"
                         android:textSize="@dimen/font_7" />
                 </LinearLayout>
