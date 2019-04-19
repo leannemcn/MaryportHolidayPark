@@ -164,7 +164,7 @@ public class UserHomeActivity extends BaseActivity implements View.OnClickListen
 
                 // Check Pending Booking
                 if (hasPendingBook) {
-                    showToastMessage("Booking is not expired yet.");
+                    showToastMessage("Booking has not expired yet.");
                 } else {
                     Intent bookingIntent = new Intent(mContext, NewBookingActivity.class);
 
@@ -218,7 +218,7 @@ public class UserHomeActivity extends BaseActivity implements View.OnClickListen
                     editBookingIntent.putExtra("booking", currentBookingData);
                     startActivity(editBookingIntent);
                 } else {
-                    showToastMessage("You have no available booking data!");
+                    showToastMessage("You have no available bookings!");
                 }
             }
 
@@ -290,7 +290,7 @@ public class UserHomeActivity extends BaseActivity implements View.OnClickListen
 
                     // user doesn't have any booking
                     hideProgressDialog();
-                    showToastMessage("You have no available booking data!");
+                    showToastMessage("You have no available bookings!");
                 }
             }
 

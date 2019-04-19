@@ -702,12 +702,7 @@ public class BaseActivity extends AppCompatActivity {
         }
 
         if (showHintMessage && shouldShowRequestPermissionRationale) {
-            // Show an expanation to the user *asynchronously* -- don't
-            // block
-            // this thread waiting for the user's response! After the
-            // user
-            // sees the explanation, try again to request the
-            // permission.
+
             String strPermissionHint = context.getString(R.string.request_permission_hint);
             Toast.makeText(context, strPermissionHint, Toast.LENGTH_SHORT).show();
         }
@@ -756,7 +751,7 @@ public class BaseActivity extends AppCompatActivity {
         AlarmManager am = getAlarmManager();
         PendingIntent pi = PendingIntent.getService(mContext, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         am.set(AlarmManager.RTC_WAKEUP, timeInMillis, pi);
-        // Log.d("OskarSchindler", "createAlarm "+requestCode+" time: "+timeInMillis+" PI "+pi.toString());
+
     }
 
     protected void deleteAlarm(Intent i, int requestCode) {
@@ -764,7 +759,7 @@ public class BaseActivity extends AppCompatActivity {
             PendingIntent pi = PendingIntent.getService(mContext, requestCode, i, PendingIntent.FLAG_NO_CREATE);
             pi.cancel();
             getAlarmManager().cancel(pi);
-            Log.d("OskarSchindler", "PI Cancelled " + doesPendingIntentExist(i, requestCode));
+            Log.d("Leanne", "PI Cancelled " + doesPendingIntentExist(i, requestCode));
         }
     }
 

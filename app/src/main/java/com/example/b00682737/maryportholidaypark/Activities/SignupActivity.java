@@ -67,7 +67,7 @@ public class SignupActivity extends BaseActivity {
                 }
 
                 if (!inputsCanBePassword(password) || password.length() < 8) {
-                    showAlert("Password should have at least 1 capital and 8 or more characters.");
+                    showAlert("Password should have at least 1 capital with 8 or more characters.");
                     return;
                 }
 

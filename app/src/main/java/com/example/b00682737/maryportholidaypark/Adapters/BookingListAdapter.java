@@ -53,7 +53,7 @@ public class BookingListAdapter extends BaseAdapter {
         // Get Item Data
         FBbooking currentBooking = (FBbooking) getItem(position);
 
-        // Gas Image
+     
         final ImageView ivEvent = (ImageView) convertView.findViewById(R.id.ivEvent);
         if (currentBooking.getCaravanId() == 1) {
             ivEvent.setImageResource(R.drawable.carnaby0);

@@ -32,14 +32,13 @@ public class TodoNotificationService extends IntentService {
         mChecklistId = intent.getIntExtra(TODOUUID, -1);
 
         if (!TextUtils.isEmpty(mTodoText) && mChecklistId != -1) {
-            Log.d("OskarSchindler", "onHandleIntent called");
+            Log.d("Leanne", "onHandleIntent called");
 
             NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             Intent mainIntent = new Intent(this, UserHomeActivity.class);
             mainIntent.putExtra(TodoNotificationService.TODOUUID, mChecklistId);
 
-            //Intent deleteIntent = new Intent(this, DeleteNotificationService.class);
-            //deleteIntent.putExtra(TODOUUID, mTodoUUID);
+
 
             Notification notification = new Notification.Builder(this)
                     .setContentTitle(getString(R.string.ic_title_reminder))
@@ -49,7 +48,7 @@ public class TodoNotificationService extends IntentService {
                     .setAutoCancel(true)
                     .setDefaults(Notification.DEFAULT_SOUND)
                     .setPriority(Notification.PRIORITY_MAX)
-                    //.setDeleteIntent(PendingIntent.getService(this, mTodoUUID.hashCode(), deleteIntent, PendingIntent.FLAG_UPDATE_CURRENT))
+
                     .setContentIntent(PendingIntent.getActivity(this, mChecklistId, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT))
                     .build();
 
