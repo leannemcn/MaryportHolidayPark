@@ -9,7 +9,7 @@
     android:layout_marginRight="@dimen/padding3"
     android:layout_height="wrap_content">
 
-    <com.example.b00682737.maryportholidaypark.view.ResizableImageView
+    <com.example.b00682737.maryportholidaypark.design.ResizableImageView
         android:id="@+id/img_carnaby"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
